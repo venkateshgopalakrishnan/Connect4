@@ -1,0 +1,46 @@
+{
+    "type": "modal",
+    "private_metadata": "",
+    "callback_id": "feedback",
+    "title": {
+      "type": "plain_text",
+      "text": "Connect4 Feedback",
+      "emoji": true
+    },
+    "submit": {
+      "type": "plain_text",
+      "text": "Submit",
+      "emoji": true
+    },
+    "close": {
+      "type": "plain_text",
+      "text": "Cancel",
+      "emoji": true
+    },
+    "blocks": [
+      {
+        "type": "input",
+        "block_id": "bid-feedback",
+        "label": {
+          "type": "plain_text",
+          "text": "Please provide helpful feedback that will help us improve Connect4",
+          "emoji": true
+        },
+        "element": {
+          "type": "plain_text_input",
+          "multiline": true,
+          "action_id": "aid-feedback",
+          "initial_value": ""
+        }
+      },
+      {
+        "type": "context",
+        "elements": [
+          {
+            "type": "mrkdwn",
+            "text": ":exclamation:_Feedback you submit will be gathered and used for future enhancements or improvements of this bot_"
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,296 @@
+{
+	"blocks": [
+		{
+			"block_id": "divider1",
+			"type": "divider"
+		},
+		{
+			"block_id": "buttons",
+			"type": "actions",
+			"elements": [
+				{
+					"value": "0",
+					"action_id": "column0",
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": ":small_red_triangle_down:",
+						"emoji": true
+					}
+				},
+				{
+					"value": "1",
+					"action_id": "column1",
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": ":small_red_triangle_down:",
+						"emoji": true
+					}
+				},
+				{
+					"value": "2",
+					"action_id": "column2",
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": ":small_red_triangle_down:",
+						"emoji": true
+					}
+				},
+				{
+					"value": "3",
+					"action_id": "column3",
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": ":small_red_triangle_down:",
+						"emoji": true
+					}
+				},
+				{
+					"value": "4",
+					"action_id": "column4",
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": ":small_red_triangle_down: ",
+						"emoji": true
+					}
+				},
+				{
+					"value": "5",
+					"action_id": "column5",
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": ":small_red_triangle_down:",
+						"emoji": true
+					}
+				},
+				{
+					"value": "6",
+					"action_id": "column6",
+					"type": "button",
+					"text": {
+						"type": "plain_text",
+						"text": ":small_red_triangle_down:",
+						"emoji": true
+					}
+				}
+			]
+		},
+		{
+			"block_id": "divider2",
+			"type": "divider"
+		},
+		{
+			"block_id": "0",
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*\t   :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				}
+			]
+		},
+		{
+			"block_id": "1",
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*\t   :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				}
+			]
+		},
+		{
+			"block_id": "2",
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*\t   :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				}
+			]
+		},
+		{
+			"block_id": "3",
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*\t   :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				}
+			]
+		},
+		{
+			"block_id": "4",
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*\t   :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				}
+			]
+		},
+		{
+			"block_id": "5",
+			"type": "context",
+			"elements": [
+				{
+					"type": "mrkdwn",
+					"text": "*\t   :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				},
+				{
+					"type": "mrkdwn",
+					"text": "*\t\t  :o:*"
+				}
+			]
+		},
+		{
+			"block_id": "divider3",
+			"type": "divider"
+		}
+	]
+}

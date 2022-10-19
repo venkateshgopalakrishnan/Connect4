@@ -1,0 +1,37 @@
+{
+	"title": {
+		"type": "plain_text",
+		"text": "Play Connect4",
+		"emoji": true
+	},
+	"submit": {
+		"type": "plain_text",
+		"text": "Submit",
+		"emoji": true
+	},
+	"type": "modal",
+	"private_metadata": "",
+	"close": {
+		"type": "plain_text",
+		"text": "Cancel",
+		"emoji": true
+	},
+	"blocks": [
+		{
+			"type": "section",
+			"block_id": "player_id",
+			"text": {
+				"type": "mrkdwn",
+				"text": "*_Select the user you want to play Connect4 with_*"
+			},
+			"accessory": {
+				"type": "users_select",
+				"placeholder": {
+					"type": "plain_text",
+					"text": "Opponent"
+				},
+				"action_id": "users-select-action"
+			}
+		}
+	]
+}
