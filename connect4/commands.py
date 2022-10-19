@@ -2,8 +2,8 @@ from abc import ABC, abstractmethod
 
 from slack_sdk.web import WebClient
 
-from helper import build_response, empty_response, open_modal
-from messages import help_message
+from connect4.helper import build_response, empty_response, open_modal
+from connect4.messages import help_message
 
 
 class CommandStrategy(ABC):
@@ -35,11 +35,11 @@ class HelpCommandStrategy(CommandStrategy):
 
 class GameStartModalCommandStrategy(CommandStrategy):
     def process_command(self, req_data: dict, slack_client: WebClient):
-        open_modal("./views/game_start_modal.json", req_data.get('trigger_id'), slack_client)
+        open_modal("connect4/views/game_start_modal.json", req_data.get('trigger_id'), slack_client)
         return empty_response(200)
 
 
 class FeedbackModalCommandStrategy(CommandStrategy):
     def process_command(self, req_data: dict, slack_client: WebClient):
-        open_modal("./views/feedback_request.json", req_data.get('trigger_id'), slack_client)
+        open_modal("connect4/views/feedback_request.json", req_data.get('trigger_id'), slack_client)
         return empty_response(200)

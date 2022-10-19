@@ -2,10 +2,10 @@ from abc import ABC, abstractmethod
 
 from slack_sdk.web import WebClient
 
-from commands import CommandContext, GameStartModalCommandStrategy
-from config import logger
-from connect_four import ConnectFour
-from helper import build_response, empty_response, modify_game_board_message, modify_game_board_win_positions, \
+from connect4.commands import CommandContext, GameStartModalCommandStrategy
+from connect4.config import logger
+from connect4.connect_four import ConnectFour
+from connect4.helper import build_response, empty_response, modify_game_board_message, modify_game_board_win_positions, \
     get_play_again_button_block
 
 
