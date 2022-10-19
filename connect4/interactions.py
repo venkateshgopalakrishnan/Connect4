@@ -2,11 +2,11 @@ from abc import ABC, abstractmethod
 
 from slack_sdk.web import WebClient
 
-from connect4.actions import ActionContext, UsersSelectActionStrategy, PlayAgainActionStrategy, \
+from actions import ActionContext, UsersSelectActionStrategy, PlayAgainActionStrategy, \
     PlayCurrentGameActionStrategy
-from connect4.config import logger
-from connect4.helper import build_response, empty_response, build_new_game_message
-from connect4.messages import feedback_message, user_message
+from config import logger
+from helper import build_response, empty_response, build_new_game_message
+from messages import feedback_message, user_message
 
 
 class InteractionStrategy(ABC):

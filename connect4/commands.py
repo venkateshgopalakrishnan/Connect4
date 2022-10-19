@@ -2,8 +2,8 @@ from abc import ABC, abstractmethod
 
 from slack_sdk.web import WebClient
 
-from connect4.helper import build_response, empty_response, open_modal
-from connect4.messages import help_message
+from helper import build_response, empty_response, open_modal
+from messages import help_message
 
 
 class CommandStrategy(ABC):

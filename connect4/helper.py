@@ -3,7 +3,7 @@ import json
 from fastapi import Response
 from slack_sdk.errors import SlackApiError
 
-from connect4.config import logger
+from config import logger
 
 
 def build_response(msg, code, headers=None):

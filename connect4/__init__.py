@@ -5,9 +5,9 @@ import os
 import re
 import string
 from slack_sdk.web import WebClient
-from connect4.interactions import InteractionContext, GameStartSubmissionInteractionStrategy, \
+from interactions import InteractionContext, GameStartSubmissionInteractionStrategy, \
     BlockActionsInteractionStrategy
-from connect4.commands import CommandContext, HelpCommandStrategy, FeedbackModalCommandStrategy, \
+from commands import CommandContext, HelpCommandStrategy, FeedbackModalCommandStrategy, \
     GameStartModalCommandStrategy
 from slack_sdk.socket_mode import SocketModeClient
 from slack_sdk.socket_mode.response import SocketModeResponse
@@ -15,10 +15,10 @@ from slack_sdk.socket_mode.request import SocketModeRequest
 from fastapi import FastAPI, Response, Request
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
-from connect4.config import API_PREFIX, LOG_LEVEL
-from connect4.helper import build_response, empty_response
-from connect4.messages import admin_message, help_message
-from connect4.connect_four import ConnectFour
+from config import API_PREFIX, LOG_LEVEL
+from helper import build_response, empty_response
+from messages import admin_message, help_message
+from connect_four import ConnectFour
 
 # loop = asyncio.get_event_loop()
 # app = FastAPI()
