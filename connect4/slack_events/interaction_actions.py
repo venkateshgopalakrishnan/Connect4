@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
+from fastapi import Response
 
 from slack_sdk.web import WebClient
 
-from connect4.commands import CommandContext, GameStartModalCommandStrategy
+from connect4.slack_events.commands import CommandContext, GameStartModalCommandStrategy
 from connect4.config import logger
 from connect4.connect_four import ConnectFour
 from connect4.helper import build_response, empty_response, modify_game_board_message, modify_game_board_win_positions, \
@@ -61,7 +62,7 @@ class PlayAgainActionStrategy(ActionStrategy):
 
 class PlayCurrentGameActionStrategy(ActionStrategy):
     def process_action(self, req_data: dict, slack_client: WebClient):
-        logger.info(f"Message - {req_data.get('message')}")
+        # logger.debug(f"Message - {req_data.get('message')}")
         user_id = req_data.get('user').get('id')
         metadata_payload = req_data.get('message').get('metadata').get('event_payload')
         if user_id == metadata_payload.get('next_player') and metadata_payload.get('game_status') == 'ongoing':
