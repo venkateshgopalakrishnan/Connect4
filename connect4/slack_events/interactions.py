@@ -2,19 +2,21 @@ from abc import ABC, abstractmethod
 
 from slack_sdk.web import WebClient
 
-from connect4.actions import ActionContext, UsersSelectActionStrategy, PlayAgainActionStrategy, \
+from connect4.slack_events.interaction_actions import ActionContext, UsersSelectActionStrategy, PlayAgainActionStrategy, \
     PlayCurrentGameActionStrategy
 from connect4.config import logger
 from connect4.helper import build_response, empty_response, build_new_game_message
 from connect4.messages import feedback_message, user_message
 
 
+# This class is an abstract base class that defines the interface for interaction strategies.
 class InteractionStrategy(ABC):
     @abstractmethod
     def process_interaction(self, req_data: dict, slack_client: WebClient):
         pass
 
 
+# It's a class that holds the state of the interaction
 class InteractionContext:
     def __init__(self, interaction_strategy: InteractionStrategy) -> None:
         self._interaction_strategy = interaction_strategy
@@ -31,10 +33,10 @@ class InteractionContext:
         self._interaction_strategy.process_interaction(req_data, slack_client)
 
 
+# It's a strategy for interacting with the game start submission page
 class GameStartSubmissionInteractionStrategy(InteractionStrategy):
     def process_interaction(self, req_data: dict, slack_client: WebClient):
         user_id = req_data.get('user').get('id')
-        # team_domain = req_data.get('team').get('domain')
         player_id = req_data.get('view').get('state').get('values').get('player_id').get('users-select-action').get(
             'selected_user')
         # TODO check if you have to remove this
@@ -50,15 +52,11 @@ class GameStartSubmissionInteractionStrategy(InteractionStrategy):
         mpdm_channel_id = resp.get('channel').get('id')
         resp = slack_client.chat_postMessage(channel=mpdm_channel_id, text=f"<@{user_id}> vs <@{player_id}>",
                                              blocks=blocks, metadata=metadata, link_names=True)
-        logger.info(resp)
-        # admin_message = messages.admin_message(user_id, player_id, team_domain)
-        # # TODO
-        # resp = slack_client.chat_postMessage(channel='C03EZBE3FR7', text=admin_message['text'],
-        #                                      attachments=admin_message['attachments'], link_names=True)
-        # logger.debug(f'metrics sent - {resp}')
+        logger.debug(resp)
         return empty_response(200)
 
 
+# It's a strategy for interacting with the user when they submit feedback
 class FeedbackSubmissionInteractionStrategy(InteractionStrategy):
     def process_interaction(self, req_data: dict, slack_client: WebClient):
         user_id = req_data['user']['id']
@@ -76,6 +74,7 @@ class FeedbackSubmissionInteractionStrategy(InteractionStrategy):
         logger.debug(f"Updated User's channel with status code {resp.status_code}")
 
 
+# It's a strategy for interacting with a block
 class BlockActionsInteractionStrategy(InteractionStrategy):
     def process_interaction(self, req_data: dict, slack_client: WebClient):
         action = req_data.get('actions')[0]

@@ -1,19 +1,5 @@
 import time
 
-
-def admin_message(user_id, player_id, workspace):
-    return {
-        "text": "Bot used by",
-        "attachments": [
-            {
-                "color": "#c6fff8",
-                "text": f"Used by *<@{user_id}>* to play with *<@{player_id}>* on workspace - {workspace}",
-                "ts": time.time()
-            }
-        ]
-    }
-
-
 def feedback_message(user_feedback, name, workspace, avatar):
     return {
         "text": "Received feedback from a user",

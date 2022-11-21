@@ -1,8 +1,20 @@
 from typing import Union
 
 
+# ConnectFour is a class that represents a game of Connect Four.
 class ConnectFour:
     def __init__(self, player: int, game_column: int, board: list[list[int]]):
+        """
+        This function takes in a player, a game column, and a board, and sets the player, game column,
+        and board as attributes of the class.
+        
+        :param player: The player who is making the move
+        :type player: int
+        :param game_column: The column that the player chose to play in
+        :type game_column: int
+        :param board: The current state of the game board
+        :type board: list[list[int]]
+        """
         self._player = player
         self._game_column: int = game_column
         self._position: Union[int, None] = None
@@ -20,9 +32,18 @@ class ConnectFour:
         self._board = board
 
     def check_column_valid(self) -> bool:
+        """
+        If the last element in the column is not empty, then the column is full
+        :return: a boolean value.
+        """
         return not bool(self._board[self._game_column][-1])
 
     def make_move(self) -> (list[list[int]], int):
+        """
+        The function takes in a board and a player, and returns a new board with the player's move added
+        to it
+        :return: The board and the position of the player.
+        """
         new_board: list[list[int]] = self._board
         for position, cell in enumerate(new_board[self._game_column]):
             if not cell:
@@ -33,9 +54,17 @@ class ConnectFour:
         return self._board, self._position
 
     def check_game_over(self) -> bool:
+        """
+        If all columns have a piece in the top row, then the game is over
+        :return: bool.
+        """
         return all([bool(col[-1]) for col in self._board])
 
     def check_win(self) -> list[tuple]:
+        """
+        We check for a win in the row, column, and both diagonals of the last move
+        :return: A list of tuples.
+        """
         row: int = self._game_column
         col: int = self._position
         row_min = col_min = 0

@@ -10,4 +10,4 @@ EXPOSE 8080
 
 USER 1000
 
-CMD ["uvicorn", "connect4:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["uvicorn", "connect4.main:app", "--host", "0.0.0.0", "--port", "8080"]
